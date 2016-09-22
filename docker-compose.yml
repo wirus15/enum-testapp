@@ -1,0 +1,29 @@
+version: '2'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  web:
+    build: ./docker/php
+    links:
+      - db
+    volumes:
+      - .:/var/www/html/enum
+      - ./docker/php/enum.conf:/etc/apache2/sites-enabled/enum.conf
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "80:80"
+    working_dir: /var/www/html/enum
+    networks:
+      default:
+        aliases:
+          - web
+
+  db:
+    image: orchardup/mysql
+    environment:
+      MYSQL_DATABASE: enum
+    ports:
+      - "3306:3306"
