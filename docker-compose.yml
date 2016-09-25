@@ -11,6 +11,7 @@ services:
       - db
     volumes:
       - .:/var/www/html/enum
+      - ../enum-bundle:/var/www/html/enum-bundle
       - ./docker/php/enum.conf:/etc/apache2/sites-enabled/enum.conf
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     ports:
