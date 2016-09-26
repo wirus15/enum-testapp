@@ -68,7 +68,4 @@ swiftmailer:
     spool:     { type: memory }
 
 enum:
-    type:
-        storage: file
-    types:
-        foobar: AppBundle\Enum\FooBar
+    type_storage: file

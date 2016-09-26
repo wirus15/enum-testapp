@@ -5,10 +5,10 @@ namespace AppBundle\Enum;
 use Enum\Enum;
 
 /**
- * Class FooBar
+ * Class Status
  * @package AppBundle\Enum
  */
-class FooBar extends Enum
+class Status extends Enum
 {
     const FOO = 'foo';
     const BAR = 'bar';

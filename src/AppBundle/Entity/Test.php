@@ -2,11 +2,11 @@
 
 namespace AppBundle\Entity;
 
-use AppBundle\Enum\FooBar;
+use AppBundle\Enum\Status;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class FooBar
+ * Class Status
  * @package AppBundle\Entity
  * @ORM\Entity()
  */
@@ -21,7 +21,7 @@ class Test
     private $id;
 
     /**
-     * @var FooBar
+     * @var Status
      * @ORM\Column(type="foobar")
      */
     private $foobar;
@@ -35,7 +35,7 @@ class Test
     }
 
     /**
-     * @return FooBar
+     * @return Status
      */
     public function getFoobar()
     {
@@ -43,9 +43,9 @@ class Test
     }
 
     /**
-     * @param FooBar $foobar
+     * @param Status $foobar
      */
-    public function setFoobar(FooBar $foobar)
+    public function setFoobar(Status $foobar)
     {
         $this->foobar = $foobar;
     }
